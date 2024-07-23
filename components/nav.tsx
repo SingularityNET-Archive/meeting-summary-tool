@@ -111,13 +111,22 @@ const Nav = () => {
         <Link href="/" className="navitems">
           Home
         </Link>
+        <Link href='/workgroup' className="navitems">
+          Workgroup
+        </Link>
+        <Link href='/issues' className="navitems">
+          Issues
+        </Link>
         {roleData?.appRole == "admin" && (<>
-          <Link href='/workgroup' className="navitems">
-            Workgroup
+          <Link href='/template-editor' className="navitems">
+            Template Editor
+          </Link>
+          <Link href='/meeting-summaries' className="navitems">
+            Meeting Summaries
           </Link>
           {roleData?.appRole == "admin" && roleData?.username === process.env.NEXT_PUBLIC_ADMIN_USERNAME && (
-            <Link href='/meeting-summaries' className="navitems">
-              Meeting Summaries
+            <Link href='/dev-tools' className="navitems">
+              Dev Tools
             </Link>
           )}
         </>
