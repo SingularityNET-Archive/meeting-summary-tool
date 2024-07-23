@@ -1,19 +1,19 @@
 // pages/doc-manager/index.tsx
 import { useState, useEffect } from "react";
 import type { NextPage } from "next";
-import styles from '../../styles/meetingSummaries.module.css';
+import styles from '../../styles/issues.module.css';
 
-const MeetingSummaries: NextPage = () => {
+const Issues: NextPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     
-    console.log("MeetingSummaries useEffect");
+    console.log("Issues useEffect");
   }, []);
 
   return (
     <div className={styles.container}>
-      <h1> Manage Meeting Summaries (Edit and delete)</h1>
+      <h1>Issues</h1>
       {loading ? (
         <p>Loading documents...</p>
       ) : (
@@ -27,4 +27,4 @@ const MeetingSummaries: NextPage = () => {
   );
 };
 
-export default MeetingSummaries;
+export default Issues;
